@@ -1,0 +1,107 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">David Alberto Ortiz Martinez</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">:)</a>
+
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="container text-center">
+  <h1 class="display-5">Create/Update</h1>
+</div>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-6">
+      <label for="">Nombre</label>
+      <input
+        [(ngModel)]="model.strNombre"
+        type="text"
+        class="form-control"
+        placeholder="Nombre"
+      />
+    </div>
+    <div class="col-6">
+      <label for="">Apaterno</label>
+      <input
+        [(ngModel)]="model.strApellidoP"
+        type="text"
+        class="form-control"
+        placeholder="A paterno"
+      />
+    </div>
+    <div class="col-6">
+      <label for="">A materno</label>
+      <input
+        [(ngModel)]="model.strApelidoM"
+        type="text"
+        class="form-control"
+        placeholder="a materno"
+      />
+    </div>
+    <div class="col-6">
+      <label for="">email</label>
+      <input
+        [(ngModel)]="model.strEmail"
+        type="text"
+        class="form-control"
+        placeholder="email"
+      />
+    </div>
+    <div class="col-6">
+      <label for="">Grupo</label>
+      <input
+        [(ngModel)]="model.strGrupo"
+        type="text"
+        class="form-control"
+        placeholder="grupo"
+      />
+    </div>
+    <div class="col-12">
+            <button
+        class="btn btn-primary w-100"
+        type="button"
+        (click)="update()"
+        *ngIf="updating; else elseBlockButton"
+      >Update</button>
+
+      <ng-template #elseBlockButton>
+        <button  class="btn btn-success w-100" type="button" (click)="save()">Create</button>
+      </ng-template>
+    </div>
+    <div class="col-12">
+      <button
+        class="btn btn-danger w-100"
+        type="button"
+        label="Cancel"
+        [routerLink]="['/models']"
+      >Cancel</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="flex flex-column">
+  
+  
+  
+ 
+  
+</div>
+
+
+
+
